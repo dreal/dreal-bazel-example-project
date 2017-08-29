@@ -14,38 +14,9 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-6
-      env:
-        - COMPILER="--compiler=gcc-6" BUILD_TYPE="-c dbg"
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-5
-      env:
-        - COMPILER="--compiler=gcc-5" BUILD_TYPE="-c dbg"
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
             - g++-4.9
       env:
-        - COMPILER="--compiler=gcc-4.9" BUILD_TYPE="-c dbg"
-    - compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            g++-4.9
-            clang++-3.9
-      env:
-        - COMPILER="--compiler=clang-3.9" BUILD_TYPE="-c dbg"
-
+        - COMPILER="" BUILD_TYPE="-c dbg"
     - os: osx
       osx_image: xcode8.3
       compiler: clang
