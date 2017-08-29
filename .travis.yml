@@ -8,15 +8,6 @@ env:
 
 matrix:
   include:
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-4.9
-      env:
-        - COMPILER="" BUILD_TYPE="-c dbg"
     - os: osx
       osx_image: xcode8.3
       compiler: clang
