@@ -1,7 +1,7 @@
 #include <ostream>
 #include <experimental/optional>
 
-#include "dreal.h"
+#include "dreal/dreal.h"
 
 namespace dreal {
 namespace {
