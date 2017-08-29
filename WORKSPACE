@@ -13,18 +13,13 @@ pkg_config_package(
     modname = "ibex",
 )
 
-pkg_config_package(
-    name = "clp",
-    modname = "clp",
-)
-
 load("//tools:github.bzl", "github_archive")
 
 github_archive(
     name = "dreal", # Apache-2.0
     repository = "dreal/dreal3-apache2",
-    commit = "b3b5a106ab132126c5d67a4be4e073108d1d035e",
-    sha256 = "49b210b61a4eaee641675a3daa1cf9457148600847b22032af0162201a7f00fe",
+    commit = "b13eb8283b42e4f4eec96695813df03eefcd0453",
+    sha256 = "e45b6bb91dc99545847e49994fb6fbac49527ffcecc41bea4c7981573519583e",
 )
 
 load("@dreal//dreal:workspace.bzl", "dreal_workspace")
