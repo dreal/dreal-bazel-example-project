@@ -13,8 +13,8 @@ github_archive(
 github_archive(
     name = "dreal", # Apache-2.0
     repository = "dreal/dreal4",
-    commit = "4.17.10.1",
-    sha256 = "1639781d8925d58d9d8413cd54696e8c10a0b65917328c7809b6531911a9c5d7",
+    commit = "4.17.10.2",
+    sha256 = "e02d1073cc1594b9f0a4ac949db0fcd2b0a3879d9db69e8d5266e2547634680b",
 )
 
 load("@dreal//dreal:workspace.bzl", "dreal_workspace")
