@@ -5,16 +5,16 @@ load("//tools:github.bzl", "github_archive")
 
 github_archive(
     name = "io_kythe_dreal", # Apache-2.0
+    commit = "ee2e00de4b72e9ed9f1b819898b5238c03d10dd6",
     repository = "dreal-deps/kythe",
-    commit = "beea4d79aac45e6a50774052254f8b74c4fa1b9c",
-    sha256 = "81b93528a95f7ee60b2711cf46de8387018ba9d87ea568e8d347d337f3a1eb7b",
+    sha256 = "7229c5d5a471fd26bcc50b5202568dc9c3035d7375312eb92ded9230e9f6886f",
 )
 
 github_archive(
     name = "dreal", # Apache-2.0
     repository = "dreal/dreal4",
-    commit = "13c47fb8cbbf26764fbb215217020ec484d68940",
-    sha256 = "ab1781a19a3d9d52e19d00f8da3a163093c863257abbb04f160cb3dc15cd9aa3",
+    commit = "5ee74add52a726de12f54be536621df69051d1d9",
+    sha256 = "f3c0d9e55b71311397a71c2a61b0053ffd1916cea21e5ddc2d941efd35c00aaf",
 )
 
 load("@dreal//dreal:workspace.bzl", "dreal_workspace")
