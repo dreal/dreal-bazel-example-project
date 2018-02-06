@@ -15,7 +15,7 @@ macOS 10.12/10.13
 We use [homebrew](https://brew.sh).
 
 ```bash
-brew install bazel pkg-config dreal-deps/ibex/ibex nlopt
+brew install bazel pkg-config dreal-deps/ibex/ibex@2.6.5 nlopt
 ```
 
 
