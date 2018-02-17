@@ -14,16 +14,16 @@ matrix:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-5']
       env:
-        - COMPILER="" BUILD_TYPE="-c dbg"
-        - CXX=g++-5
-        - CC=gcc-5
+        - BUILD_TYPE="dbg"
+        - CXX_COMPILER=g++-5
+        - C_COMPILER=gcc-5
     - os: osx
       osx_image: xcode9.2
       compiler: clang
       env:
-        - COMPILER="" BUILD_TYPE="-c dbg"
-        - CXX=clang++
-        - CC=clang
+        - BUILD_TYPE="dbg"
+        - CXX_COMPILER=clang++
+        - C_COMPILER=clang
 
 install:
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
@@ -40,4 +40,4 @@ install:
     fi
 
 script:
-  - CXX=${CXX} CC=${CC} bazel run //:check_sat ${COMPILER} ${BUILD_TYPE}
+  - CXX=${CXX_COMPILER} CC=${CC_COMPILER} bazel run //:check_sat -c ${BUILD_TYPE}
