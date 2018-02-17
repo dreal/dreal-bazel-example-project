@@ -16,14 +16,14 @@ matrix:
       env:
         - BUILD_TYPE="dbg"
         - CXX_COMPILER=g++-5
-        - C_COMPILER=gcc-5
+        - CC_COMPILER=gcc-5
     - os: osx
       osx_image: xcode9.2
       compiler: clang
       env:
         - BUILD_TYPE="dbg"
         - CXX_COMPILER=clang++
-        - C_COMPILER=clang
+        - CC_COMPILER=clang
 
 install:
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
