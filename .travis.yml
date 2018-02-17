@@ -9,7 +9,7 @@ env:
 matrix:
   include:
     - os: osx
-      osx_image: xcode8.3
+      osx_image: xcode9.2
       compiler: clang
       env:
         - COMPILER="" BUILD_TYPE="-c dbg"
@@ -19,12 +19,13 @@ install:
       sudo add-apt-repository ppa:dreal/dreal -y;
       sudo apt update;
       sudo apt install autoconf automake bison coinor-libclp-dev flex libtool pkg-config libibex-dev libnlopt-dev;
-      wget https://github.com/bazelbuild/bazel/releases/download/0.5.4/bazel_0.5.4-linux-x86_64.deb;
-      sudo dpkg -i bazel_0.5.4-linux-x86_64.deb;
+      export BAZEL_VERSION=0.10.1;
+      wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel_${BAZEL_VERSION}-linux-x86_64.deb;
+      sudo dpkg -i bazel_${BAZEL_VERSION}-linux-x86_64.deb;
     fi
   - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then
       brew update;
-      brew install autoconf bazel libtool pkg-config dreal-deps/ibex/ibex nlopt || true;
+      brew install autoconf bazel libtool pkg-config dreal-deps/ibex/ibex@2.6.5 nlopt || true;
     fi
 
 script:
