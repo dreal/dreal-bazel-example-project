@@ -14,6 +14,7 @@ matrix:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-5']
       env:
+        - COMPILER="" BUILD_TYPE="-c dbg"
         - CXX=g++-5
         - CC=gcc-5
     - os: osx
@@ -21,6 +22,8 @@ matrix:
       compiler: clang
       env:
         - COMPILER="" BUILD_TYPE="-c dbg"
+        - CXX=clang++
+        - CC=clang
 
 install:
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
@@ -37,4 +40,4 @@ install:
     fi
 
 script:
-  - bazel run //:check_sat ${COMPILER} ${BUILD_TYPE}
+  - CXX=${CXX} CC=${CC} bazel run //:check_sat ${COMPILER} ${BUILD_TYPE}
