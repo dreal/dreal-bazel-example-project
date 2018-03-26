@@ -18,7 +18,14 @@ matrix:
         - CXX_COMPILER=g++-5
         - CC_COMPILER=gcc-5
     - os: osx
-      osx_image: xcode9.2
+      osx_image: xcode9.2  # macOS-10.12
+      compiler: clang
+      env:
+        - BUILD_TYPE="dbg"
+        - CXX_COMPILER=clang++
+        - CC_COMPILER=clang
+    - os: osx
+      osx_image: xcode9.3beta  # macOS-10.13
       compiler: clang
       env:
         - BUILD_TYPE="dbg"
@@ -29,8 +36,8 @@ install:
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
       sudo add-apt-repository ppa:dreal/dreal -y;
       sudo apt update;
-      sudo apt install autoconf automake bison coinor-libclp-dev flex libtool pkg-config libibex-dev libnlopt-dev;
-      export BAZEL_VERSION=0.10.1;
+      sudo apt install autoconf automake bison coinor-libclp-dev flex libtool pkg-config python-dev libibex-dev libnlopt-dev;
+      export BAZEL_VERSION=0.11.1;
       wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel_${BAZEL_VERSION}-linux-x86_64.deb;
       sudo dpkg -i bazel_${BAZEL_VERSION}-linux-x86_64.deb;
     fi
