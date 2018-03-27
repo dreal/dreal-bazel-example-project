@@ -6,32 +6,10 @@ use dReal as a library in a bazel project.
 Setup
 =====
 
-You need to have the dependencies of
-[dReal4](https://github.com/dreal/dreal4) installed in your system.
+Install [the prerequsites to build dReal](https://github.com/dreal/dreal4#install-prerequsites).
 
-macOS 10.12/10.13
------
-
-We use [homebrew](https://brew.sh).
-
-```bash
-brew install bazel pkg-config dreal-deps/ibex/ibex@2.6.5 nlopt
-```
-
-
-Ubuntu 14.04/16.04
-------------------
-
-```bash
-sudo apt install -y software-properties-common  # for add-apt-repository
-sudo add-apt-repository ppa:dreal/dreal -y
-sudo apt update
-sudo apt install bison coinor-libclp-dev flex pkg-config libibex-dev libnlopt-dev
-```
-
-
-Bazel Build
-===========
+Build Example Project
+=====================
 
 Following the above setup, please run the following to build and run
 the example project.
