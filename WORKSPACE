@@ -6,8 +6,8 @@ load("//tools:github.bzl", "github_archive")
 github_archive(
     name = "dreal", # Apache-2.0
     repository = "dreal/dreal4",
-    commit = "4.18.05.2",
-    sha256 = "6919b8cb233f6228f27f913327db16de75c5b154f9de8207aac3eaa0db0a316d",
+    commit = "4.18.10.1",
+    sha256 = "919db0574c3488e4a744181bf3b480f827756c9528cbe2f0c7ffa29f2ebf89e8",
 )
 
 load("@dreal//dreal:workspace.bzl", "dreal_workspace")
