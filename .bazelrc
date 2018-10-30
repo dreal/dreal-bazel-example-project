@@ -1,0 +1,13 @@
+# Import any user defined rules.
+try-import %workspace%/user.bazelrc
+
+build --cxxopt -std=c++14
+build --host_cxxopt=-std=c++14
+
+# Default to an optimized build.
+build -c opt
+
+# Default build options.
+build --force_pic
+build --strip=never
+build --strict_system_includes
