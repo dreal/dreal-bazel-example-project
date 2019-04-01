@@ -3,9 +3,9 @@ workspace(name = "dreal_bazel_example")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-DREAL_COMMIT = "2ecbc869a10f51be32670467c1bcd54a43a002dd"
+DREAL_COMMIT = "master"
 
-DREAL_SHA256 = "11c47f34a45e3aa80dc8cf83c1db9a31f033c035e1e22cfc42dce69cc33fa546"
+DREAL_SHA256 = ""
 
 http_archive(
     name = "dreal",  # Apache-2.0
