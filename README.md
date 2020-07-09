@@ -1,3 +1,5 @@
+![CI](https://github.com/dreal/dreal-bazel-example-project/workflows/CI/badge.svg)
+
 An example [bazel](https://bazel.build/) project to show you how to
 use dReal as a library in a bazel project.
 
