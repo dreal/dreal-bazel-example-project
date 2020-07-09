@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/dreal/dreal-bazel-example-project.svg?branch=master)](https://travis-ci.org/dreal/dreal-bazel-example-project)
-
 An example [bazel](https://bazel.build/) project to show you how to
 use dReal as a library in a bazel project.
 
